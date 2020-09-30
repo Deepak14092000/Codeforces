@@ -1,30 +1,24 @@
-#include <bits/stdc++.h>
-
+#include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-	int casos, agua_obtenida = 0, agua_faltante = 0, solicitud, res = 0;
-	
-	scanf("%d", &casos);
-	
-	while(casos--){
-		scanf("%d", &solicitud);
-		if(solicitud < 0){
-			agua_faltante = (solicitud + agua_obtenida);
-			
-			agua_obtenida = agua_faltante;				
-			if(agua_faltante < 0){
-				res += abs(agua_faltante);
-				agua_obtenida = 0;
-			}
-					
-		}
-		else{
-			agua_obtenida+=solicitud;	
-		}
-		
-	}
-		printf("%d\n", res);	
-	
-	return 0;
+typedef long long int ll;
+
+int main()
+{
+    ll i,j=0,t,k,l,a=0,b,m,n,ck=0,dk=0,w,e,r;
+
+        scl1(n);
+        ll arr[n];
+        for(i=0; i<n; i++)
+            scl1(arr[i]);
+
+        for(i=0; i<n; i++){
+            ck+=arr[i];
+            if(ck<0){
+                dk+=(-1*ck);
+                ck=0;
+            }
+        }
+        cout<<dk<<endl;
+
 }
